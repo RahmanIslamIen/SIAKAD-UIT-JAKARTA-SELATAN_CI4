@@ -10,6 +10,7 @@ class AdminController extends BaseController
         return view('admin_panel');
     }
 
+    // bagian section pengumuman semuanya di handle di sini 
     public function tambahPengumuman()
     {
         $judul = $this->request->getPost('judul');
@@ -25,4 +26,6 @@ class AdminController extends BaseController
         $model->insert($data);
         return redirect()->back();
     }
+
+    // bagian section matakuliah semua nya di handle di sini
 }
