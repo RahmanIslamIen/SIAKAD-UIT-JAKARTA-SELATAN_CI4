@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SIAKAD UIT Jaksel</title>
 
+  <!-- bootstrap 5.0 -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -282,6 +284,8 @@
 </div>
 <!-- ./wrapper -->
 
+<!-- bootstrap js -->
+<script src="dist/js/bootstrap.bundle.min.js"></script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

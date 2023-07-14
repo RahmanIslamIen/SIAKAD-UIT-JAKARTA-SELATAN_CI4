@@ -29,7 +29,15 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// routes sistem informasi akademik universitas teknologi jakarta selatan
+
+// bagian admin 
 $routes->get('/', 'AdminController::index');
+$routes->post('admin/pengumuman/tambah', 'AdminController::tambahPengumuman');
+
+
+// bagian user
 
 /*
  * --------------------------------------------------------------------

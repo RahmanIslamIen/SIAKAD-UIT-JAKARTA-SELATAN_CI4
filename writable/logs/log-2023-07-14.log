@@ -1,0 +1,9 @@
+CRITICAL - 2023-07-14 11:34:57 --> Call to undefined method CodeIgniter\HTTP\Response::redirectBack()
+in APPPATH\Controllers\AdminController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->tambahPengumuman()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+INFO - 2023-07-14 11:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-14 11:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
