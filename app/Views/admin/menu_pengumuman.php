@@ -5,14 +5,19 @@
   Tambah Pengumuman Baru
 </button>
 
+<?php foreach ($data_pengumuman as $baris): ?>
 <div class="card">
+  <div class="mx-2">
+    <?php echo $baris['tgl_pengumuman'] ?>
+  </div>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the 
-            card's content.</p>
+        <h5 class="card-title"><?php echo $baris['judul'] ?></h5>
+        <p class="card-text"><?php echo $baris['konten'] ?></p>
         <a href="#" class="card-link">selengkap nya...</a>
+        <a href="<?= base_url('admin/pengumuman/hapus/'.$baris['id']) ?>" class="btn btn-danger float-end">hapus</a>
     </div>
 </div>
+<?php endforeach; ?>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

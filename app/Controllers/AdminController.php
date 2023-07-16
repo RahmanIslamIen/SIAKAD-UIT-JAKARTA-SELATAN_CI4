@@ -7,7 +7,9 @@ class AdminController extends BaseController
 {
     public function index()
     {
-        return view('admin/admin_panel');
+        $model = new PengumumanModel;
+        $data['data_pengumuman'] = $model->findAll();
+        return view('admin/menu_pengumuman', $data);
     }
 
     // bagian section pengumuman semuanya di handle di sini 
@@ -24,6 +26,12 @@ class AdminController extends BaseController
             'tgl_pengumuman' => $tgl_pengumuman
         ];
         $model->insert($data);
+        return redirect()->back();
+    }
+
+    public function hapusPengumuman($id){
+        $model = new PengumumanModel;
+        $model->delete($id);
         return redirect()->back();
     }
 
