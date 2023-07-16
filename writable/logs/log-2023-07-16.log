@@ -1,0 +1,10 @@
+CRITICAL - 2023-07-16 09:02:39 --> Invalid file: "admin.admin_panel"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin.admin_panel')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin.admin_panel', [], true)
+ 3 APPPATH\Controllers\AdminController.php(10): view('admin.admin_panel')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')

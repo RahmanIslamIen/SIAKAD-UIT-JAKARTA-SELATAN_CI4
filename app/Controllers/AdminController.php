@@ -7,7 +7,7 @@ class AdminController extends BaseController
 {
     public function index()
     {
-        return view('admin_panel');
+        return view('admin/admin_panel');
     }
 
     // bagian section pengumuman semuanya di handle di sini 
