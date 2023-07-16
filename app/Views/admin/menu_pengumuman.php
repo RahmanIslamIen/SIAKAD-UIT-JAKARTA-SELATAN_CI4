@@ -30,15 +30,16 @@
         <form method="post" action="<?= base_url('admin/pengumuman/tambah') ?>">
         <div class="row">
           <label for="judul">Judul:</label>
-          <input type="text" name="judul" id="judul" required>
+          <input type="text" name="judul" id="judul" class="form-control" required>
         </div>
         <div class="row">
           <label for="konten">Konten:</label>
-          <textarea name="konten" id="konten" required></textarea>
+          <textarea name="konten" id="konten" class="form-control" required></textarea>
         </div>
         <div class="row">
           <label for="tgl_pengumuman">Tanggal Pengumuman:</label>
-          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" required>
+          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" class="form-control" value="<?= date('Y-m-d'); ?>" hidden>
+          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" class="form-control" value="<?= date('Y-m-d'); ?>" disabled>
         </div>
             <input type="submit" value="Tambah" class="btn btn-success m-2">
         </form>
