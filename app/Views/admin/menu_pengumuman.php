@@ -12,8 +12,8 @@
   </span>
     <div class="card-body">
         <h5 class="card-title"><?php echo $baris['judul'] ?></h5>
-        <p class="card-text"><?= substr($baris['konten'], 0, 250) ?></p>
-        <!-- Button trigger modal -->
+        <p class="card-text"><?= substr($baris['konten'], 0, 260) ?></p>
+        <!-- Button update pengumuman -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $baris['id'] ?>">
           Update Pengumuman
         </button>
@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal update pengumuman -->
 <div class="modal fade" id="<?php echo $baris['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -31,9 +31,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="post" action="">
-          <textarea name="konten" id="" cols="30" rows="10"><?php echo $baris['konten'] ?></textarea>
-          <input type="submit" value="simpan perubahan" class="btn btn-info">
+        <form method="post" action="<?= base_url('admin/pengumuman/update/'.$baris['id']) ?>">
+          <input type="text" name="judul" class="form-control" value="<?php echo $baris['judul'] ?>">
+          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" class="form-control" value="<?php echo $baris['tgl_pengumuman'] ?>">
+          <textarea name="konten" id="editor" class="form-control" cols="30" rows="10"><?php echo $baris['konten'] ?></textarea>
+          <input type="submit" value="simpan perubahan" class="btn btn-info m-2">
         </form>
       </div>
       <div class="modal-footer">

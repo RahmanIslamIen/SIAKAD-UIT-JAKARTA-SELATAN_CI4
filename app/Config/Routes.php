@@ -35,6 +35,7 @@ $routes->set404Override();
 // bagian admin 
 $routes->get('/', 'AdminController::index');
 $routes->post('admin/pengumuman/tambah', 'AdminController::tambahPengumuman');
+$routes->post('admin/pengumuman/update/(:num)', 'AdminController::updatePengumuman/$1');
 $routes->get('admin/pengumuman/hapus/(:num)', 'AdminController::hapusPengumuman/$1');
 
 

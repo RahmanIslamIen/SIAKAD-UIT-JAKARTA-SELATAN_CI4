@@ -29,6 +29,22 @@ class AdminController extends BaseController
         return redirect()->back();
     }
 
+    public function updatePengumuman($id)
+    {
+        $judul = $this->request->getPost('judul');
+        $konten = $this->request->getPost('konten');
+        $tgl_pengumuman = $this->request->getPost('tgl_pengumuman');
+
+        $model = new PengumumanModel();
+        $data = [
+            'judul' => $judul,
+            'konten' => $konten,
+            'tgl_pengumuman' => $tgl_pengumuman
+        ];
+        $model->update($id, $data);
+        return redirect()->back();
+    }
+
     public function hapusPengumuman($id){
         $model = new PengumumanModel;
         $model->delete($id);

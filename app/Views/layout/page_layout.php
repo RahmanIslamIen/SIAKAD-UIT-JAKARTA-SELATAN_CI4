@@ -7,6 +7,8 @@
 
   <!-- bootstrap 5.0 -->
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- ckeditor 5 -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -286,6 +288,17 @@
 
 <!-- bootstrap js -->
 <script src="dist/js/bootstrap.bundle.min.js"></script>
+<!-- ckeditor 5 -->
+<script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+</script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
