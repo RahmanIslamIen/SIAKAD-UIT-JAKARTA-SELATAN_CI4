@@ -32,9 +32,9 @@
       </div>
       <div class="modal-body">
         <form method="post" action="<?= base_url('admin/pengumuman/update/'.$baris['id']) ?>">
-          <input type="text" name="judul" class="form-control" value="<?php echo $baris['judul'] ?>">
-          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" class="form-control" value="<?php echo $baris['tgl_pengumuman'] ?>">
-          <textarea name="konten" id="editor" class="form-control" cols="30" rows="10"><?php echo $baris['konten'] ?></textarea>
+          <input type="text" name="judul" class="form-control m-2" value="<?php echo $baris['judul'] ?>">
+          <input type="date" name="tgl_pengumuman" id="tgl_pengumuman" class="form-control m-2" value="<?php echo $baris['tgl_pengumuman'] ?>">
+          <textarea name="konten" id="editor" class="form-control m-2" cols="30" rows="10"><?php echo $baris['konten'] ?></textarea>
           <input type="submit" value="simpan perubahan" class="btn btn-info m-2">
         </form>
       </div>
