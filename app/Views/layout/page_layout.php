@@ -241,8 +241,10 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    
-    <?= $this->renderSection('breadcrumb') ?>
+
+  <!-- Content Header (Page header) -->
+    <?= $this->renderSection('headerKonten') ?>
+  <!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content" width="100%">
