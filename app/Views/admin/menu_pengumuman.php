@@ -6,16 +6,40 @@
 </button>
 
 <?php foreach ($data_pengumuman as $baris): ?>
-<div class="card">
-  <div class="mx-2">
+<div class="card p-2">
+  <span class="badge text-bg-info" style="width: 100px;">
     <?php echo $baris['tgl_pengumuman'] ?>
-  </div>
+  </span>
     <div class="card-body">
         <h5 class="card-title"><?php echo $baris['judul'] ?></h5>
         <p class="card-text"><?php echo $baris['konten'] ?></p>
-        <a href="#" class="card-link">selengkap nya...</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $baris['id'] ?>">
+          Update Pengumuman
+        </button>
+        <a href="#" class="card-link mx-4">selengkap nya...</a>
         <a href="<?= base_url('admin/pengumuman/hapus/'.$baris['id']) ?>" class="btn btn-danger float-end">hapus</a>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="<?php echo $baris['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $baris['judul'] ?></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+          <textarea name="konten" id="" cols="30" rows="10"><?php echo $baris['konten'] ?></textarea>
+          <input type="submit" value="simpan perubahan" class="btn btn-info">
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
 </div>
 <?php endforeach; ?>
 
