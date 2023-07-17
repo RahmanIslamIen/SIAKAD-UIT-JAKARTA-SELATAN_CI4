@@ -12,7 +12,7 @@
   </span>
     <div class="card-body">
         <h5 class="card-title"><?php echo $baris['judul'] ?></h5>
-        <p class="card-text"><?php echo $baris['konten'] ?></p>
+        <p class="card-text"><?= substr($baris['konten'], 0, 250) ?></p>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $baris['id'] ?>">
           Update Pengumuman
