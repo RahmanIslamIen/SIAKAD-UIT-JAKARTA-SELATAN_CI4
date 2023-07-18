@@ -36,7 +36,6 @@
           <p>Rekap Nilai</p>
         </a>
       </li>
-        
     </ul>
   </nav>
   <!-- /.sidebar-menu -->
