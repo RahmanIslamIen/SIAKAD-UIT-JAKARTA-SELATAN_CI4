@@ -52,4 +52,7 @@ class AdminController extends BaseController
     }
 
     // bagian section matakuliah semua nya di handle di sini
+    public function semuaMatkul(){
+        return view('admin/menu_matkul');
+    }
 }
