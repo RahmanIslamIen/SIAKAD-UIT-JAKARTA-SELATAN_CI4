@@ -58,4 +58,20 @@ class AdminController extends BaseController
         $data['semua_matkul'] = $model->findAll();
         return view('admin/menu_matkul', $data);
     }
+    
+    public function tambahMatkul{
+        $nama_matkul = $this->request->getPost('nama_matkul');
+        
+        $latestKode = $model->selectMax('kd_matkul'); // Mendapatkan kode terbaru dari database
+        $nextNumber = (int) substr($latestKode, 2) + 1; // Mendapatkan angka berikutnya
+        $kd_matkul = 'MK' . str_pad($nextNumber, 3, '0', STR_PAD_LEFT);
+
+        $model = new MatakuliahModel();
+        $data = [
+            'nama_matkul' => $nama_matkul,
+            'kd_matkul' => $kd_matkul,
+        ];
+        $model->insert($data);
+        return redirect()->back();
+    }
 }
