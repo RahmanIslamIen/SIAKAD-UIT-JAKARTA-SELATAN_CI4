@@ -48,9 +48,35 @@ CREATE TABLE IF NOT EXISTS `matakuliah` (
   `nama_matkul` varchar(50) DEFAULT NULL,
   `kd_matkul` char(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table siakad_uit_jaksel.matakuliah: ~0 rows (approximately)
+-- Dumping data for table siakad_uit_jaksel.matakuliah: ~25 rows (approximately)
+REPLACE INTO `matakuliah` (`id`, `nama_matkul`, `kd_matkul`) VALUES
+	(1, 'Bahasa Inggris', 'MK001'),
+	(2, 'Dasar Pemrograman Web', 'MK002'),
+	(3, 'Pemrograman Berorientasi Objek', 'MK003'),
+	(4, 'Matematika Diskrit', 'MK004'),
+	(5, 'Sistem Operasi', 'MK005'),
+	(6, 'Basis Data', 'MK006'),
+	(7, 'Rekayasa Perangkat Lunak', 'MK007'),
+	(8, 'Pemrograman Mobile', 'MK008'),
+	(9, 'Algoritma dan Struktur Data', 'MK009'),
+	(10, 'Jaringan Komputer', 'MK010'),
+	(11, 'Komunikasi Data', 'MK011'),
+	(12, 'Sistem Informasi', 'MK012'),
+	(13, 'Keamanan Jaringan', 'MK013'),
+	(14, 'Pemrograman Kompetitif', 'MK014'),
+	(15, 'Interaksi Manusia dan Komputer', 'MK015'),
+	(16, 'Kecerdasan Buatan', 'MK016'),
+	(17, 'Analisis dan Perancangan Sistem Informasi', 'MK017'),
+	(18, 'Pemrograman Paralel', 'MK018'),
+	(19, 'Sistem Basis Data Terdistribusi', 'MK019'),
+	(20, 'Pemrograman Fungsional', 'MK020'),
+	(21, 'Desain Antarmuka Pengguna', 'MK021'),
+	(22, 'Pemrograman Embedded', 'MK022'),
+	(23, 'Manajemen Proyek', 'MK023'),
+	(24, 'Pengenalan Pola', 'MK024'),
+	(25, 'Teori Bahasa dan Automata', 'MK025');
 
 -- Dumping structure for table siakad_uit_jaksel.pengumuman
 CREATE TABLE IF NOT EXISTS `pengumuman` (

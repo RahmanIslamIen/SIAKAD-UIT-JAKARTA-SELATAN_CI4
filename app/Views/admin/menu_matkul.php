@@ -62,7 +62,20 @@
 <?= $this->section('content') ?>
 <a href="" class="btn btn-success">Tambah Mata Kuliah Baru</a>
 
-<?php foreach($semua_matkul as $matakuliah): ?>
-
-<?php endforeach ?>
+<table class="table m-2">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Nama Matakuliah</th>
+      <th scope="col">Kd Matkul</th>
+    </tr>
+  </thead>
+  <?php foreach($semua_matkul as $matakuliah): ?>
+  <tbody>
+   <tr>
+      <td><?php echo $matakuliah['nama_matkul']; ?></td>
+      <td><?php echo $matakuliah['kd_matkul'] ?></td>
+    </tr>
+  </tbody>
+  <?php endforeach ?>
+</table>
 <?= $this->endSection() ?>
