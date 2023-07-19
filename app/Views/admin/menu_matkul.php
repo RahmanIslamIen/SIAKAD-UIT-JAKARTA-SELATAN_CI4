@@ -60,5 +60,9 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
+<a href="" class="btn btn-success">Tambah Mata Kuliah Baru</a>
 
+<?php foreach($semua_matkul as $matakuliah): ?>
+
+<?php endforeach ?>
 <?= $this->endSection() ?>

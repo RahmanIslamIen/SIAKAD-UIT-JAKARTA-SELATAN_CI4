@@ -2,9 +2,11 @@
 
 namespace App\Controllers;
 use App\Models\PengumumanModel;
+use App\Models\MatakuliahModel;
 
 class AdminController extends BaseController
 {
+    // bagian section pengumuman semuanya di handle di sini 
     public function index()
     {
         $model = new PengumumanModel;
@@ -12,7 +14,6 @@ class AdminController extends BaseController
         return view('admin/menu_pengumuman', $data);
     }
 
-    // bagian section pengumuman semuanya di handle di sini 
     public function tambahPengumuman()
     {
         $judul = $this->request->getPost('judul');
@@ -53,6 +54,8 @@ class AdminController extends BaseController
 
     // bagian section matakuliah semua nya di handle di sini
     public function semuaMatkul(){
-        return view('admin/menu_matkul');
+        $model = new MatakuliahModel;
+        $data['semua_matkul'] = $model->findAll();
+        return view('admin/menu_matkul', $data);
     }
 }
