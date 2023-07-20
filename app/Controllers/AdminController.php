@@ -55,16 +55,18 @@ class AdminController extends BaseController
     // bagian section matakuliah semua nya di handle di sini
     public function semuaMatkul(){
         $model = new MatakuliahModel;
+
+        $latestKode = $model->selectMax('kd_matkul'); // Mendapatkan kode terbaru dari database
+        $nextNumber = (int) substr($latestKode, 2) + 1; // Mendapatkan angka berikutnya
+        $seri_kd_matkul = 'MK' . str_pad($nextNumber, 3, '0', STR_PAD_LEFT);
+
         $data['semua_matkul'] = $model->findAll();
-        return view('admin/menu_matkul', $data);
+        return view('admin/menu_matkul', $data, $seri_kd_matkul);
     }
     
     public function tambahMatkul{
         $nama_matkul = $this->request->getPost('nama_matkul');
-        
-        $latestKode = $model->selectMax('kd_matkul'); // Mendapatkan kode terbaru dari database
-        $nextNumber = (int) substr($latestKode, 2) + 1; // Mendapatkan angka berikutnya
-        $kd_matkul = 'MK' . str_pad($nextNumber, 3, '0', STR_PAD_LEFT);
+        $kd_matkul = $this->request->getPost('kd_matkul');
 
         $model = new MatakuliahModel();
         $data = [
