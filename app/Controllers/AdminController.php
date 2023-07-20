@@ -56,8 +56,8 @@ class AdminController extends BaseController
     public function semuaMatkul(){
         $model = new MatakuliahModel;
 
-        $latestKode = $model->selectMax('kd_matkul'); // Mendapatkan kode terbaru dari database
-        $nextNumber = (int) substr($latestKode, 2) + 1; // Mendapatkan angka berikutnya
+        $latestKode = $model->selectMax('kd_matkul'); 
+        $nextNumber = (int) substr($latestKode, 2) + 1; 
         $seri_kd_matkul = 'MK' . str_pad($nextNumber, 3, '0', STR_PAD_LEFT);
 
         $data['semua_matkul'] = $model->findAll();
