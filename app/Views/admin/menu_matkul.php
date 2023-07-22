@@ -60,7 +60,31 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-<a href="" class="btn btn-success">Tambah Mata Kuliah Baru</a>
+<!-- Button modal nambah matkul -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Tambah Mata Kuliah Baru
+</button>
+
+<!-- Modal tambah matkul -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah data matkul baru</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+          <label>Nama Matakuliah</label>
+          <input type="text" class="form-control m-1" name="nama" placeholder="nama mata kuliah">
+          <label>Kode Matakuliah</label>
+          <input type="text" class="form-control m-1" name="kd_matkul" placeholder="MK001">
+          <input type="submit" class="btn btn-success m-2 float-end" value="Simpan Data">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <table class="table m-2">
   <thead class="table-dark">

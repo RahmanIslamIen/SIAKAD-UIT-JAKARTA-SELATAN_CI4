@@ -1,0 +1,18 @@
+CRITICAL - 2023-07-22 02:37:10 --> syntax error, unexpected token "{", expecting "("
+in APPPATH\Controllers\AdminController.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\app\\Controllers\\AdminController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminController')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\AdminController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-07-22 02:38:06 --> substr(): Argument #1 ($string) must be of type string, App\Models\MatakuliahModel given
+in APPPATH\Controllers\AdminController.php on line 60.
+ 1 APPPATH\Controllers\AdminController.php(60): substr(Object(App\Models\MatakuliahModel), 2)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaMatkul()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
