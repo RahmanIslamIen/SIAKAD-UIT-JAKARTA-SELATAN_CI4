@@ -72,4 +72,18 @@ class AdminController extends BaseController
         $model->insert($data);
         return redirect()->back();
     }
+
+    public function updateMatkul($id)
+    {
+        $nama_matkul = $this->request->getPost('nama_matkul');
+        $kd_matkul = $this->request->getPost('kd_matkul');
+
+        $model = new MatakuliahModel();
+        $data = [
+            'nama_matkul' => $nama_matkul,
+            'kd_matkul' => $kd_matkul
+        ];
+        $model->update($id, $data);
+        return redirect()->back();
+    }
 }

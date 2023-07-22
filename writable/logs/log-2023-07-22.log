@@ -16,3 +16,40 @@ in APPPATH\Controllers\AdminController.php on line 60.
  4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+INFO - 2023-07-22 04:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-22 04:29:07 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AdminController.php(86): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->updateMatkul('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-07-22 04:29:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AdminController.php(86): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->updateMatkul('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-07-22 04:30:01 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AdminController.php(86): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->updateMatkul('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+INFO - 2023-07-22 04:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-22 04:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-22 04:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-22 04:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-22 04:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-22 04:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

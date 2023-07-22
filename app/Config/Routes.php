@@ -40,6 +40,10 @@ $routes->post('admin/pengumuman/update/(:num)', 'AdminController::updatePengumum
 $routes->get('admin/pengumuman/hapus/(:num)', 'AdminController::hapusPengumuman/$1');
 // menu matkul
 $routes->get('/matkul', 'AdminController::semuaMatkul');
+$routes->post('admin/matkul/tambah', 'AdminController::tambahMatkul');
+$routes->post('admin/matkul/update/(:num)', 'AdminController::updateMatkul/$1');
+
+
 
 
 // bagian user

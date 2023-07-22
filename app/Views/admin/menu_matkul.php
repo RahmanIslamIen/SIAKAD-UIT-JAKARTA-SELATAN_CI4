@@ -7,7 +7,7 @@
       <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
       <li class="nav-item">
-        <a href="<? echo base_url('/') ?>" class="nav-link">
+        <a href="<?php echo base_url('/') ?>" class="nav-link">
           <i class="fas fa-circle nav-icon"></i>
           <p>Pengumuman</p>
         </a>
@@ -74,9 +74,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="<?= base_url('admin/matkul/tambah') ?>" method="post">
           <label>Nama Matakuliah</label>
-          <input type="text" class="form-control m-1" name="nama" placeholder="nama mata kuliah">
+          <input type="text" class="form-control m-1" name="nama_matkul" placeholder="nama mata kuliah">
           <label>Kode Matakuliah</label>
           <input type="text" class="form-control m-1" name="kd_matkul" placeholder="MK001">
           <input type="submit" class="btn btn-success m-2 float-end" value="Simpan Data">
@@ -91,6 +91,7 @@
     <tr>
       <th scope="col">Nama Matakuliah</th>
       <th scope="col">Kd Matkul</th>
+      <th scope="col" colspan="2" class="text-center">opsi</th>
     </tr>
   </thead>
   <?php foreach($semua_matkul as $matakuliah): ?>
@@ -98,6 +99,36 @@
    <tr>
       <td><?php echo $matakuliah['nama_matkul']; ?></td>
       <td><?php echo $matakuliah['kd_matkul'] ?></td>
+      <td>
+          <!-- update data -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $matakuliah['id']; ?>">
+            update
+          </button>
+          <div class="modal fade" id="<?php echo $matakuliah['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Update Matakuliah</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="<?= base_url('admin/matkul/update/'.$matakuliah['id']) ?>" method="post">
+                    <label for="">Nama matakuliah</label>
+                    <input type="text" class="form-control" name="nama_matkul" value="<?php echo $matakuliah['nama_matkul']; ?>">
+                    <label for="">kd matkul</label>
+                    <input type="text" class="form-control" name="kd_matkul" value="<?php echo $matakuliah['kd_matkul']; ?>" hidden>
+                    <input type="text" class="form-control" name="kd_matkul" value="<?php echo $matakuliah['kd_matkul']; ?>" disabled>
+                    <input type="submit" class="btn btn-success m-2 float-end" value="ubah data">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </td>
+      <td>
+        <!-- delete data -->
+        <a class="btn btn-danger">delete</a>
+      </td>
     </tr>
   </tbody>
   <?php endforeach ?>
