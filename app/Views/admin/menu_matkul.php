@@ -127,7 +127,7 @@
       </td>
       <td>
         <!-- delete data -->
-        <a class="btn btn-danger">delete</a>
+        <a href="<?= base_url('admin/matkul/hapus/'.$matakuliah['id']) ?>" class="btn btn-danger">delete</a>
       </td>
     </tr>
   </tbody>

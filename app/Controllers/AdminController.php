@@ -86,4 +86,10 @@ class AdminController extends BaseController
         $model->update($id, $data);
         return redirect()->back();
     }
+
+    public function hapusMatkul($id){
+        $model = new MatakuliahModel;
+        $model->delete($id);
+        return redirect()->back();
+    }
 }
