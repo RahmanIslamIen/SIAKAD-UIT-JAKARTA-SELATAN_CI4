@@ -92,4 +92,8 @@ class AdminController extends BaseController
         $model->delete($id);
         return redirect()->back();
     }
+    
+    // bagian menu dosen untuk mengatur semua data dosen
+
+
 }
