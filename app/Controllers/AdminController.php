@@ -99,6 +99,9 @@ class AdminController extends BaseController
     }
 
     // bagian menu mahasiswa
+    public function semuaMahasiswa(){
+        
+    }
 
     // bagian menu Rekap Nilai Untuk IPK
 
