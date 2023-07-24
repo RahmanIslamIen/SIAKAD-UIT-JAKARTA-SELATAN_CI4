@@ -94,9 +94,12 @@ class AdminController extends BaseController
     }
     
     // bagian menu dosen untuk mengatur semua data dosen
+    public function semuaDosen(){
+        // aksi
+    }
 
     // bagian menu mahasiswa
-    
+
     // bagian menu Rekap Nilai Untuk IPK
 
 
