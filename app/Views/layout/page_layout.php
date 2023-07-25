@@ -9,6 +9,8 @@
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- ckeditor 5 -->
   <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
+  <!-- data tables -->
+  <link href="dist/css/datatabels/jquery.dataTables.min.css" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -150,6 +152,12 @@
                 .catch( error => {
                         console.error( error );
                 } );
+</script>
+<!-- data tables bootstrap 5 -->
+<script src="dist/css/datatabels/jquery-3.7.0.js"></script>
+<script src="dist/css/datatabels/jquery.dataTables.min.js"></script>
+<script>
+  new DataTable('#Dtables');
 </script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>

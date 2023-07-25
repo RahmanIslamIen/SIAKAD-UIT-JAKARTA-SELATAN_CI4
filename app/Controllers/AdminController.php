@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\PengumumanModel;
 use App\Models\MatakuliahModel;
+use App\Models\DosenModel;
 
 class AdminController extends BaseController
 {
@@ -95,7 +96,9 @@ class AdminController extends BaseController
     
     // bagian menu dosen untuk mengatur semua data dosen
     public function semuaDosen(){
-        
+        $model = new DosenModel;
+        $data['semua_dosen'] = $model->findAll();
+        return view('admin/menu_dosen', $data);
     }
 
     // bagian menu mahasiswa
