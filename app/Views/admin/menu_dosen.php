@@ -60,6 +60,12 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
+
+<!-- Button tambah dosen -->
+<button type="button" class="btn btn-success m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  tambah dosen
+</button>
+
 <table id="Dtables" class="display" style="width:100%">
     <thead>
         <tr>
@@ -67,6 +73,7 @@
             <th>gelar</th>
             <th>kd dosen</th>
             <th>kd matkul</th>
+            <th class="text-center">Opsi</th>
         </tr>
     </thead>
     <tbody>
@@ -76,8 +83,37 @@
             <td><?php echo $semDos['gelar']; ?></td>
             <td><?php echo $semDos['kd_dosen']; ?></td>
             <td><?php echo $semDos['kd_matkul']; ?></td>
+            <td class="text-center">
+              <a class="btn btn-primary m-1">update</a>
+              <a class="btn btn-danger m-1">hapus</a>
+            </td>
         </tr>
         <?php endforeach ?>
     </tbody>
 </table>
+
+<!-- Modal tambah data dosen -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Dosen Baru</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <label for="">Nama Dosen</label>
+          <input type="text" class="form-control" name="nama_dosen" placeholder="masukan nama dosen" required>
+          <label for="">Gelar</label>
+          <input type="text" class="form-control" name="gelar" placeholder="gelar dosen .phd .m.kom s.pd dll" required>
+          <label for="">Kode Dosen</label>
+          <input type="text" class="form-control" name="kd_dosen" placeholder="D001 dst" required>
+          <label for="">Kode Matkul</label>
+          <input type="text" class="form-control" name="kd_matkul" placeholder="MK001 dst" required>
+          <input type="submit" class="btn btn-info m-2 float-end" value="simpan data">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <?= $this->endSection() ?>
