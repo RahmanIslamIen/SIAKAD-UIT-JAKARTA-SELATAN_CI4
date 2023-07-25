@@ -120,7 +120,7 @@
         </div>
         <div class="row">
           <label for="konten">Konten:</label>
-          <textarea name="konten" id="konten" class="form-control" required></textarea>
+          <textarea name="konten" id="editor" class="form-control" required></textarea>
         </div>
         <div class="row">
           <label for="tgl_pengumuman">Tanggal Pengumuman:</label>
