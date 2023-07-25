@@ -98,6 +98,10 @@ class AdminController extends BaseController
     public function semuaDosen(){
         $model = new DosenModel;
         $data['semua_dosen'] = $model->findAll();
+
+        $matkul = new MatakuliahModel;
+        $data['semua_matkul'] = $matkul->findAll();
+
         return view('admin/menu_dosen', $data);
     }
 

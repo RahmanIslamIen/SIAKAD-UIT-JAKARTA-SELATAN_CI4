@@ -101,7 +101,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="<?= base_url('admin/dosen/tambah') ?>" method="post">
           <label for="">Nama Dosen</label>
           <input type="text" class="form-control" name="nama_dosen" placeholder="masukan nama dosen" required>
           <label for="">Gelar</label>
@@ -109,7 +109,11 @@
           <label for="">Kode Dosen</label>
           <input type="text" class="form-control" name="kd_dosen" placeholder="D001 dst" required>
           <label for="">Kode Matkul</label>
-          <input type="text" class="form-control" name="kd_matkul" placeholder="MK001 dst" required>
+          <select class="form-select" name="kd_matkul">
+            <?php foreach($semua_matkul as $semMk): ?>
+            <option value="<?php echo $semMk['kd_matkul']; ?>"><?php echo $semMk['nama_matkul']; ?></option>
+            <?php endforeach ?>
+          </select>
           <input type="submit" class="btn btn-info m-2 float-end" value="simpan data">
         </form>
       </div>
