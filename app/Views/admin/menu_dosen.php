@@ -67,7 +67,7 @@
 </button>
 
 <table id="Dtables" class="display" style="width:100%">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>nama</th>
             <th>gelar</th>

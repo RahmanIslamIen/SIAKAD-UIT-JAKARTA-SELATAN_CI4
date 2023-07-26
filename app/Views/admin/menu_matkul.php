@@ -61,7 +61,7 @@
 
 <?= $this->section('content') ?>
 <!-- Button modal nambah matkul -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-success m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Tambah Mata Kuliah Baru
 </button>
 
@@ -86,20 +86,20 @@
   </div>
 </div>
 
-<table class="table m-2">
+<table id="Dtables" class="display" style="width:100%">
   <thead class="table-dark">
     <tr>
-      <th scope="col">Nama Matakuliah</th>
-      <th scope="col">Kd Matkul</th>
-      <th scope="col" colspan="2" class="text-center">opsi</th>
+      <th>Nama Matakuliah</th>
+      <th>Kd Matkul</th>
+      <th class="text-center">opsi</th>
     </tr>
   </thead>
-  <?php foreach($semua_matkul as $matakuliah): ?>
   <tbody>
+    <?php foreach($semua_matkul as $matakuliah): ?>
    <tr>
       <td><?php echo $matakuliah['nama_matkul']; ?></td>
       <td><?php echo $matakuliah['kd_matkul'] ?></td>
-      <td>
+      <td class="text-center">
           <!-- update data -->
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $matakuliah['id']; ?>">
             update
@@ -113,9 +113,9 @@
                 </div>
                 <div class="modal-body">
                   <form action="<?= base_url('admin/matkul/update/'.$matakuliah['id']) ?>" method="post">
-                    <label for="">Nama matakuliah</label>
+                    <label class="float-start">Nama matakuliah</label>
                     <input type="text" class="form-control" name="nama_matkul" value="<?php echo $matakuliah['nama_matkul']; ?>">
-                    <label for="">kd matkul</label>
+                    <label class="float-start">kd matkul</label>
                     <input type="text" class="form-control" name="kd_matkul" value="<?php echo $matakuliah['kd_matkul']; ?>" hidden>
                     <input type="text" class="form-control" name="kd_matkul" value="<?php echo $matakuliah['kd_matkul']; ?>" disabled>
                     <input type="submit" class="btn btn-success m-2 float-end" value="ubah data">
@@ -124,13 +124,11 @@
               </div>
             </div>
           </div>
-      </td>
-      <td>
-        <!-- delete data -->
-        <a href="<?= base_url('admin/matkul/hapus/'.$matakuliah['id']) ?>" class="btn btn-danger">delete</a>
+          <!-- delete data -->
+          <a href="<?= base_url('admin/matkul/hapus/'.$matakuliah['id']) ?>" class="btn btn-danger">delete</a>
       </td>
     </tr>
+    <?php endforeach ?>
   </tbody>
-  <?php endforeach ?>
 </table>
 <?= $this->endSection() ?>
