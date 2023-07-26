@@ -122,6 +122,24 @@ class AdminController extends BaseController
         return redirect()->back();
     }
 
+    public function updateDosen($id)
+    {
+        $nama_dosen = $this->request->getPost('nama_dosen');
+        $gelar = $this->request->getPost('gelar');
+        $kd_dosen = $this->request->getPost('kd_dosen');
+        $kd_matkul = $this->request->getPost('kd_matkul');
+
+        $model = new DosenModel();
+        $data = [
+            'nama_dosen' => $nama_dosen,
+            'gelar' => $gelar,
+            'kd_dosen' => $kd_dosen,
+            'kd_matkul' => $kd_matkul
+        ];
+        $model->update($id, $data);
+        return redirect()->back();
+    }
+
 
     // bagian menu mahasiswa
     public function semuaMahasiswa(){
