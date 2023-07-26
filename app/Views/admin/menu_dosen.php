@@ -84,8 +84,34 @@
             <td><?php echo $semDos['kd_dosen']; ?></td>
             <td><?php echo $semDos['kd_matkul']; ?></td>
             <td class="text-center">
-              <!-- bagian update  -->
-              <a class="btn btn-primary m-1">update</a>
+              <!-- Button Update Dosen -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $semDos['id']; ?>">
+                update
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="<?php echo $semDos['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">ubah data dosen</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <label class="float-start">nama dosen</label>
+                        <input type="text" class="form-control" name="nama_dosen">
+                        <label class="float-start">gelar dosen</label>
+                        <input type="text" class="form-control" name="gelar">
+                        <label class="float-start">kode dosen</label>
+                        <input type="text" class="form-control" name="kd_dosen" hidden>
+                        <input type="text" class="form-control" name="kd_dosen" disabled >
+                        <label class="float-start">kode matakuliah</label>
+                        <input type="text" class="form-control" name="kd_matkul">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- hapus data dosen -->
               <a class="btn btn-danger m-1">hapus</a>
             </td>
