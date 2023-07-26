@@ -7,7 +7,7 @@ use App\Models\DosenModel;
 
 class AdminController extends BaseController
 {
-    // bagian section pengumuman semuanya di handle di sini 
+    //* bagian section pengumuman semuanya di handle di sini 
     public function index()
     {
         $model = new PengumumanModel;
@@ -53,7 +53,7 @@ class AdminController extends BaseController
         return redirect()->back();
     }
 
-    // bagian section matakuliah semua nya di handle di sini
+    //* bagian section matakuliah semua nya di handle di sini
     public function semuaMatkul(){
         $model = new MatakuliahModel;
 
@@ -94,7 +94,7 @@ class AdminController extends BaseController
         return redirect()->back();
     }
     
-    // bagian menu dosen untuk mengatur semua data dosen
+    //* bagian menu dosen untuk mengatur semua data dosen
     public function semuaDosen(){
         $model = new DosenModel;
         $data['semua_dosen'] = $model->findAll();
@@ -147,12 +147,12 @@ class AdminController extends BaseController
     }
 
 
-    // bagian menu mahasiswa
+    //* bagian menu mahasiswa
     public function semuaMahasiswa(){
         
     }
 
-    // bagian menu Rekap Nilai Untuk IPK
+    //* bagian menu Rekap Nilai Untuk IPK
     public function seluruhNilai(){
         
     }
