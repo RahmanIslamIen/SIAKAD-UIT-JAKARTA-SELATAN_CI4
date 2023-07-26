@@ -125,7 +125,7 @@
             </div>
           </div>
           <!-- delete data -->
-          <a href="<?= base_url('admin/matkul/hapus/'.$matakuliah['id']) ?>" class="btn btn-danger">delete</a>
+          <a href="<?= base_url('admin/matkul/hapus/'.$matakuliah['id']) ?>" class="btn btn-danger">hapus</a>
       </td>
     </tr>
     <?php endforeach ?>

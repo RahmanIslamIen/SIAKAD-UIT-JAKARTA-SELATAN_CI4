@@ -140,6 +140,12 @@ class AdminController extends BaseController
         return redirect()->back();
     }
 
+    public function hapusDosen($id){
+        $model = new DosenModel;
+        $model->delete($id);
+        return redirect()->back();
+    }
+
 
     // bagian menu mahasiswa
     public function semuaMahasiswa(){

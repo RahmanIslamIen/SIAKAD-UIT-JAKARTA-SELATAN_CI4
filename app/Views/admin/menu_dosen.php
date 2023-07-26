@@ -97,7 +97,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <form action="" method="post">
+                      <form action="<?= base_url('admin/dosen/update/'.$semDos['id']) ?>" method="post">
                         <label class="float-start">nama dosen</label>
                         <input type="text" class="form-control" name="nama_dosen" value="<?php echo $semDos['nama_dosen']; ?>">
                         <label class="float-start">gelar dosen</label>
@@ -114,7 +114,7 @@
                 </div>
               </div>
               <!-- hapus data dosen -->
-              <a class="btn btn-danger m-1">hapus</a>
+              <a href="<?= base_url('admin/dosen/hapus/'.$semDos['id']) ?>" class="btn btn-danger">hapus</a>
             </td>
         </tr>
         <?php endforeach ?>
