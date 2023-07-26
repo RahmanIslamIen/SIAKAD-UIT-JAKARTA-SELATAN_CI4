@@ -46,6 +46,8 @@ $routes->get('admin/matkul/hapus/(:num)', 'AdminController::hapusMatkul/$1');
 // menu dosen
 $routes->get('/dosen', 'AdminController::semuaDosen');
 $routes->post('admin/dosen/tambah', 'AdminController::tambahDosen');
+$routes->post('admin/dosen/update/(:num)', 'AdminController::updateDosen/$1');
+
 
 // menu mahasiswa
 

@@ -84,7 +84,9 @@
             <td><?php echo $semDos['kd_dosen']; ?></td>
             <td><?php echo $semDos['kd_matkul']; ?></td>
             <td class="text-center">
+              <!-- bagian update  -->
               <a class="btn btn-primary m-1">update</a>
+              <!-- hapus data dosen -->
               <a class="btn btn-danger m-1">hapus</a>
             </td>
         </tr>
