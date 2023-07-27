@@ -49,6 +49,7 @@ $routes->post('admin/dosen/tambah', 'AdminController::tambahDosen');
 $routes->post('admin/dosen/update/(:num)', 'AdminController::updateDosen/$1');
 $routes->get('admin/dosen/hapus/(:num)', 'AdminController::hapusDosen/$1');
 // menu mahasiswa
+$routes->get('/mahasiswa', 'AdminController::semuaMahasiswa');
 
 // menu rekapitulasi data nilai benttuk pdf
 

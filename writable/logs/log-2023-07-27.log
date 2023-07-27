@@ -1,0 +1,33 @@
+INFO - 2023-07-27 05:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-27 05:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-27 05:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-27 05:13:05 --> Invalid file: "menu_mahasiswa.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_mahasiswa.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('menu_mahasiswa', [], true)
+ 3 APPPATH\Controllers\AdminController.php(155): view('menu_mahasiswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaMahasiswa()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-07-27 05:13:39 --> Invalid file: "menu_mahasiswa.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_mahasiswa.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('menu_mahasiswa', [], true)
+ 3 APPPATH\Controllers\AdminController.php(155): view('menu_mahasiswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaMahasiswa()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-07-27 05:14:43 --> Invalid file: "menu_mahasiswa.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('menu_mahasiswa.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('menu_mahasiswa', [], true)
+ 3 APPPATH\Controllers\AdminController.php(155): view('menu_mahasiswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaMahasiswa()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')

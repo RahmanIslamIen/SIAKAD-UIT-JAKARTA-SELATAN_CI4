@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\PengumumanModel;
 use App\Models\MatakuliahModel;
 use App\Models\DosenModel;
+use App\Models\MahasiswaModel;
 
 class AdminController extends BaseController
 {
@@ -149,7 +150,9 @@ class AdminController extends BaseController
 
     //* bagian menu mahasiswa
     public function semuaMahasiswa(){
-        
+        $model = new MahasiswaModel;
+        $data['semua_mahasiswa'] = $model->findAll();
+        return view('admin/menu_mahasiswa', $data);
     }
 
     //* bagian menu Rekap Nilai Untuk IPK
