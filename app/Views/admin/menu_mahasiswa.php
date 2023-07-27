@@ -19,7 +19,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="<?php echo base_url('/dosen') ?>" class="nav-link">
           <i class="fas fa-circle nav-icon"></i>
           <p>Dosen</p>
         </a>
