@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Server version:               10.4.27-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
--- HeidiSQL Version:             12.3.0.6589
+-- HeidiSQL Version:             12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `dosen` (
   `kd_dosen` char(4) DEFAULT NULL,
   `kd_matkul` char(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table siakad_uit_jaksel.dosen: ~25 rows (approximately)
 REPLACE INTO `dosen` (`id`, `nama_dosen`, `gelar`, `kd_dosen`, `kd_matkul`) VALUES
@@ -55,7 +55,8 @@ REPLACE INTO `dosen` (`id`, `nama_dosen`, `gelar`, `kd_dosen`, `kd_matkul`) VALU
 	(22, 'Benjamin Cook', 'MCA', 'D022', 'MK022'),
 	(23, 'Amelia Rivera', 'M.Ed', 'D023', 'MK023'),
 	(24, 'Lucas Ward', 'MBA', 'D024', 'MK024'),
-	(25, 'Abigail Brooks', 'M.Tech', 'D025', 'MK025');
+	(25, 'Abigail Brooks', 'M.Tech', 'D025', 'MK025'),
+	(26, 'Kereen gilaa', 'p.gl', 'D026', 'MK017');
 
 -- Dumping structure for table siakad_uit_jaksel.mahasiswa
 CREATE TABLE IF NOT EXISTS `mahasiswa` (
@@ -65,9 +66,36 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `jurusan` varchar(50) DEFAULT NULL,
   `pas_foto` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table siakad_uit_jaksel.mahasiswa: ~0 rows (approximately)
+-- Dumping data for table siakad_uit_jaksel.mahasiswa: ~26 rows (approximately)
+REPLACE INTO `mahasiswa` (`id`, `nim`, `nama_mahasiswa`, `jurusan`, `pas_foto`) VALUES
+	(1, 411211069, 'Rahman Islam', 'Teknik Informatika', 'foto_profil.jpg'),
+	(2, 411211070, 'John Doe', 'Sistem Informasi', 'foto_profil.jpg'),
+	(3, 411211071, 'Jane Smith', 'Teknik Elektro', 'foto_profil.jpg'),
+	(4, 411211072, 'Michael Johnson', 'Teknik Mesin', 'foto_profil.jpg'),
+	(5, 411211073, 'Emily Brown', 'Teknik Industri', 'foto_profil.jpg'),
+	(6, 411211074, 'William Lee', 'Teknik Sipil', 'foto_profil.jpg'),
+	(7, 411211075, 'Olivia Wilson', 'Akuntansi', 'foto_profil.jpg'),
+	(8, 411211076, 'James Taylor', 'Manajemen', 'foto_profil.jpg'),
+	(9, 411211077, 'Ava Anderson', 'Hubungan Internasional', 'foto_profil.jpg'),
+	(10, 411211078, 'Alexander Thomas', 'Ilmu Komunikasi', 'foto_profil.jpg'),
+	(11, 411211079, 'Sophia Martin', 'Desain Grafis', 'foto_profil.jpg'),
+	(12, 411211080, 'Ethan Clark', 'Arsitektur', 'foto_profil.jpg'),
+	(13, 411211081, 'Isabella Rodriguez', 'Kedokteran', 'foto_profil.jpg'),
+	(14, 411211082, 'Mason Martinez', 'Farmasi', 'foto_profil.jpg'),
+	(15, 411211083, 'Mia Hernandez', 'Psikologi', 'foto_profil.jpg'),
+	(16, 411211084, 'Noah Walker', 'Hukum', 'foto_profil.jpg'),
+	(17, 411211085, 'Avery Green', 'Ekonomi', 'foto_profil.jpg'),
+	(18, 411211086, 'Liam Hall', 'Bahasa Inggris', 'foto_profil.jpg'),
+	(19, 411211087, 'Ella Turner', 'Sastra Jepang', 'foto_profil.jpg'),
+	(20, 411211088, 'Logan Collins', 'Sastra Indonesia', 'foto_profil.jpg'),
+	(21, 411211089, 'Sofia Bennett', 'Teknik Kimia', 'foto_profil.jpg'),
+	(22, 411211090, 'Benjamin Cook', 'Biologi', 'foto_profil.jpg'),
+	(23, 411211091, 'Amelia Rivera', 'Matematika', 'foto_profil.jpg'),
+	(24, 411211092, 'Lucas Ward', 'Fisika', 'foto_profil.jpg'),
+	(25, 411211093, 'Abigail Brooks', 'Kimia', 'foto_profil.jpg'),
+	(26, 411211144, 'hendra setiawan', 'Sistem Informasi', 'foto_profil.jpg');
 
 -- Dumping structure for table siakad_uit_jaksel.matakuliah
 CREATE TABLE IF NOT EXISTS `matakuliah` (
@@ -114,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `pengumuman` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table siakad_uit_jaksel.pengumuman: ~3 rows (approximately)
+-- Dumping data for table siakad_uit_jaksel.pengumuman: ~4 rows (approximately)
 REPLACE INTO `pengumuman` (`id`, `judul`, `konten`, `tgl_pengumuman`) VALUES
 	(6, 'Pendaftaran Ujian Akhir Semester (UAS) Genap 2023', '<p>Selamat pagi, mahasiswa/ Universitas UIT Jaksel!</p><p>Diberitahukan bahwa pendaftaran untuk Ujian Akhir Semester (UAS) Genap tahun 2023 telah dibuka. Mohon segera melakukan pendaftaran melalui portal akademis kami. Pastikan untuk memenuhi persyaratan dan jadwal yang telah ditentukan.</p><p>Informasi Penting:</p><ul><li>Periode pendaftaran: 1 Juli 2023 - 15 Juli 2023</li><li>Biaya pendaftaran: Rp 100.000,- per mata kuliah</li><li>Pembayaran dapat dilakukan melalui bank yang telah ditentukan</li><li>Peserta wajib mencetak kartu ujian sebagai syarat mengikuti UAS</li><li>Pastikan data pribadi dan mata kuliah terdaftar sudah benar sebelum mendaftar</li></ul><p>Bagi mahasiswa/i yang tidak melakukan pendaftaran sesuai jadwal, diharapkan untuk segera menghubungi bagian akademis. Semoga sukses dalam persiapan UAS! Terima kasih.</p>', '2023-07-17'),
 	(8, 'Perubahan Jadwal Kuliah - Mata Kuliah Sistem Basis', 'Kepada seluruh mahasiswa/i yang mengambil mata kuliah Sistem Basis Data,\r\n\r\nDengan ini kami informasikan adanya perubahan jadwal kuliah untuk mata kuliah tersebut. Berikut adalah jadwal kuliah yang baru:\r\n\r\nHari/Tanggal: Rabu, 5 Juli 2023\r\nJam: 13:00 - 15:30\r\nRuang: A-202\r\nHarap diperhatikan bahwa jadwal kuliah sebelumnya telah dibatalkan dan tidak berlaku lagi. Mohon hadir tepat waktu sesuai jadwal yang terbaru. Jika ada pertanyaan atau kendala terkait perubahan ini, silakan hubungi dosen pengampu mata kuliah.\r\n\r\nTerima kasih atas perhatiannya.', '2023-07-16'),
