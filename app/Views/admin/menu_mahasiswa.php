@@ -61,4 +61,25 @@
 
 <?= $this->section('content') ?>
 
+
+<table id="Dtables" class="table table-striped" style="width:100%">
+  <thead class="table-dark">
+    <tr>
+      <td>nim</td>
+      <td>nama mahasiswa</td>
+      <td>jurusan</td>
+      <td>pas foto</td>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($semua_mahasiswa as $mhs):  ?>
+    <tr>
+      <td><?php echo $mhs['nim'] ?></td>
+      <td><?php echo $mhs['nama_mahasiswa'] ?></td>
+      <td><?php echo $mhs['jurusan'] ?></td>
+      <td><?php echo $mhs['pas_foto'] ?></td>
+    </tr>
+    <?php endforeach ?>
+  </tbody>
+</table>
 <?= $this->endSection() ?>

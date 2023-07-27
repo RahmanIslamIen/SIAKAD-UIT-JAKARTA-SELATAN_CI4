@@ -146,7 +146,7 @@
 
 <!-- bootstrap js -->
 <script src="dist/js/bootstrap.bundle.min.js"></script>
-<!-- ckeditor 5 -->
+<!-- ckeditor 5 inisialisasi -->
 <script>
         ClassicEditor
                 .create( document.querySelector( '#editoredit' ) )
