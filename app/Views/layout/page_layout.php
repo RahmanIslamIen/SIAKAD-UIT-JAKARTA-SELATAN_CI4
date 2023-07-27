@@ -149,6 +149,16 @@
 <!-- ckeditor 5 -->
 <script>
         ClassicEditor
+                .create( document.querySelector( '#editoredit' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+</script>
+<script>
+        ClassicEditor
                 .create( document.querySelector( '#editor' ) )
                 .then( editor => {
                         console.log( editor );
