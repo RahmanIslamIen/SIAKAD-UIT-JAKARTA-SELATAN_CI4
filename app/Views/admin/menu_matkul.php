@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<table id="Dtables" class="display" style="width:100%">
+<table id="Dtables" class="table table-striped" style="width:100%">
   <thead class="table-dark">
     <tr>
       <th>Nama Matakuliah</th>

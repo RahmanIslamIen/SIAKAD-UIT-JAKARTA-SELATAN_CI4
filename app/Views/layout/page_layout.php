@@ -10,7 +10,11 @@
   <!-- ckeditor 5 -->
   <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
   <!-- data tables -->
-  <link href="dist/css/datatabels/jquery.dataTables.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -154,8 +158,6 @@
                 } );
 </script>
 <!-- data tables bootstrap 5 -->
-<script src="dist/css/datatabels/jquery-3.7.0.js"></script>
-<script src="dist/css/datatabels/jquery.dataTables.min.js"></script>
 <script>
   new DataTable('#Dtables');
 </script>
