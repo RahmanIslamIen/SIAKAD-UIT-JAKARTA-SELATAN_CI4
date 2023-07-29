@@ -62,24 +62,30 @@
 <?= $this->section('content') ?>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  tambah data
+<button type="button" class="btn btn-success m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  tambah mahasiswa
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">tambah mahasiswa baru</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <form action="" method="post" enctype="multipart/form-data">
+          <label for="">nim</label>
+          <input type="text" class="form-control" name="nim">
+          <label for="">nama mahaiswa</label>
+          <input type="text" class="form-control" name="nama_mahasiswa">
+          <label for="">jurusan</label>
+          <input type="text" class="form-control" name="jurusan">
+          <label for="">pas foto</label>
+          <input type="text" class="form-control" name="pas_foto">
+          <input type="submit" class="btn btn-info float-end m-2">
+        </form>
       </div>
     </div>
   </div>
@@ -115,8 +121,8 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">ubah mahasiswa</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body" method="post" enctype="multipart/form-data">
-                <form action="<?= base_url('admin/mahasiswa/update/'.$mhs['id']) ?>" method="post">
+              <div class="modal-body">
+                <form action="<?= base_url('admin/mahasiswa/update/'.$mhs['id']) ?>" method="post" enctype="multipart/form-data">
                   <label>nim</label>
                   <input type="number" class="form-control" name="nim" value="<?php echo $mhs['nim'] ?>">
                   <label>nama mahasiswa</label>
