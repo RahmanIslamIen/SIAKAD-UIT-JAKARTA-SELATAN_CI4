@@ -80,8 +80,27 @@
       <td><?php echo $mhs['jurusan'] ?></td>
       <td><?php echo $mhs['pas_foto'] ?></td>
       <td>
-        
-
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $mhs['id'] ?>">
+          ubah
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="<?php echo $mhs['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">ubah mahasiswa</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="" method="post">
+                  <input type="text">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- tombol hapus mahasiswa -->
         <a class="btn btn-danger" href="<?= base_url('admin/mahasiswa/hapus/'.$mhs['id']) ?>">hapus</a>
       </td>
     </tr>
