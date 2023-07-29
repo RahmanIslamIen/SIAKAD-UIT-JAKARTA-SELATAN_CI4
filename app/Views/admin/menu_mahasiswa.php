@@ -69,6 +69,7 @@
       <td>nama mahasiswa</td>
       <td>jurusan</td>
       <td>pas foto</td>
+      <td>opsi</td>
     </tr>
   </thead>
   <tbody>
@@ -78,6 +79,11 @@
       <td><?php echo $mhs['nama_mahasiswa'] ?></td>
       <td><?php echo $mhs['jurusan'] ?></td>
       <td><?php echo $mhs['pas_foto'] ?></td>
+      <td>
+        
+
+        <a class="btn btn-danger" href="<?= base_url('admin/mahasiswa/hapus/'.$mhs['id']) ?>">hapus</a>
+      </td>
     </tr>
     <?php endforeach ?>
   </tbody>
