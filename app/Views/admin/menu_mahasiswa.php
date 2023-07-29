@@ -92,9 +92,17 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">ubah mahasiswa</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body" method="post" enctype="multipart/form-data">
                 <form action="" method="post">
-                  <input type="text">
+                  <label>nim</label>
+                  <input type="number" class="form-control" name="nim" value="<?php echo $mhs['nim'] ?>">
+                  <label>nama mahasiswa</label>
+                  <input type="text" class="form-control" name="nama_mahasiswa" value="<?php echo $mhs['nama_mahasiswa'] ?>">
+                  <label>jurusan</label>
+                  <input type="text" class="form-control" name="jurusan" value="<?php echo $mhs['jurusan'] ?>">
+                  <label>pas foto</label>
+                  <input type="text" class="form-control" name="pas_foto" value="<?php echo $mhs['pas_foto'] ?>">
+                  <input type="submit" class="btn btn-info float-end m-2" value="simpan perubahan">
                 </form>
               </div>
             </div>
