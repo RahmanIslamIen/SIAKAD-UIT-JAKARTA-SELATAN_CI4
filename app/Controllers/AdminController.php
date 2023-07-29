@@ -155,6 +155,12 @@ class AdminController extends BaseController
         return view('admin/menu_mahasiswa', $data);
     }
 
+    public function hapusMahasiswa($id){
+        $model = new MahasiswaModel;
+        $model->delete($id);
+        return redirect()->back();
+    }
+
     //* bagian menu Rekap Nilai Untuk IPK
     public function seluruhNilai(){
         

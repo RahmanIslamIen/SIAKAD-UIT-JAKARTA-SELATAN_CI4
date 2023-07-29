@@ -32,7 +32,7 @@ $routes->set404Override();
 
 // routes sistem informasi akademik universitas teknologi jakarta selatan
 
-// bagian admin 
+//* semua route bagian admin 
 // menu pengumuman
 $routes->get('/', 'AdminController::index');
 $routes->post('admin/pengumuman/tambah', 'AdminController::tambahPengumuman');
@@ -50,14 +50,12 @@ $routes->post('admin/dosen/update/(:num)', 'AdminController::updateDosen/$1');
 $routes->get('admin/dosen/hapus/(:num)', 'AdminController::hapusDosen/$1');
 // menu mahasiswa
 $routes->get('/mahasiswa', 'AdminController::semuaMahasiswa');
+$routes->get('admin/mahasiswa/hapus/(:num)', 'AdminController::hapusMahasiswa/$1');
+
 
 // menu rekapitulasi data nilai benttuk pdf
 
-
-
-
-
-// bagian user
+//* semua route bagian user
 
 /*
  * --------------------------------------------------------------------
