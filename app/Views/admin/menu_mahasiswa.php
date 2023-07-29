@@ -93,7 +93,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body" method="post" enctype="multipart/form-data">
-                <form action="" method="post">
+                <form action="<?= base_url('admin/mahasiswa/update/'.$mhs['id']) ?>" method="post">
                   <label>nim</label>
                   <input type="number" class="form-control" name="nim" value="<?php echo $mhs['nim'] ?>">
                   <label>nama mahasiswa</label>

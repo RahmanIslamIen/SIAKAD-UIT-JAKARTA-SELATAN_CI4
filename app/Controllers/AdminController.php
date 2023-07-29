@@ -155,6 +155,25 @@ class AdminController extends BaseController
         return view('admin/menu_mahasiswa', $data);
     }
 
+    public function updateMahasiswa($id){
+        $nim = $this->request->getPost('nim');
+        $nama_mahasiswa = $this->request->getPost('nama_mahasiswa');
+        $jurusan = $this->request->getPost('jurusan');
+        $pas_foto = $this->request->getPost('pas_foto');
+
+        $model = new MahasiswaModel;
+
+        $data = [
+            'nim' => $nim,
+            'nama_mahasiswa' => $nama_mahasiswa,
+            'jurusan' => $jurusan,
+            'pas_foto' => $pas_foto
+        ];
+
+        $model->update($id, $data);
+        return redirect()->back();
+    }
+
     public function hapusMahasiswa($id){
         $model = new MahasiswaModel;
         $model->delete($id);

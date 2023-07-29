@@ -50,6 +50,7 @@ $routes->post('admin/dosen/update/(:num)', 'AdminController::updateDosen/$1');
 $routes->get('admin/dosen/hapus/(:num)', 'AdminController::hapusDosen/$1');
 // menu mahasiswa
 $routes->get('/mahasiswa', 'AdminController::semuaMahasiswa');
+$routes->post('admin/mahasiswa/update/(:num)', 'AdminController::updateMahasiswa/$1');
 $routes->get('admin/mahasiswa/hapus/(:num)', 'AdminController::hapusMahasiswa/$1');
 
 
