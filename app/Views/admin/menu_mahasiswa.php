@@ -75,9 +75,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="<?= base_url('admin/mahasiswa/tambah') ?>" method="post">
           <label for="">nim</label>
-          <input type="text" class="form-control" name="nim">
+          <input type="number" class="form-control" name="nim">
           <label for="">nama mahaiswa</label>
           <input type="text" class="form-control" name="nama_mahasiswa">
           <label for="">jurusan</label>
