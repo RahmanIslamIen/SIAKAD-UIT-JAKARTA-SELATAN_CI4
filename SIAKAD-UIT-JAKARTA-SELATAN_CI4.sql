@@ -66,11 +66,11 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `jurusan` varchar(50) DEFAULT NULL,
   `pas_foto` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table siakad_uit_jaksel.mahasiswa: ~26 rows (approximately)
 REPLACE INTO `mahasiswa` (`id`, `nim`, `nama_mahasiswa`, `jurusan`, `pas_foto`) VALUES
-	(1, 411211069, 'Rahman Islam', 'Teknik Informatika', 'foto_profil.jpg'),
+	(1, 411211069, 'Rahman Islam ', 'Teknik Informatika', 'foto_profil.jpg'),
 	(2, 411211070, 'John Doe', 'Sistem Informasi', 'foto_profil.jpg'),
 	(3, 411211071, 'Jane Smith', 'Teknik Elektro', 'foto_profil.jpg'),
 	(4, 411211072, 'Michael Johnson', 'Teknik Mesin', 'foto_profil.jpg'),
@@ -149,6 +149,18 @@ REPLACE INTO `pengumuman` (`id`, `judul`, `konten`, `tgl_pengumuman`) VALUES
 	(9, 'Pengumuman Beasiswa Prestasi Semester Ganjil 2023/2024', 'Diberitahukan kepada seluruh mahasiswa/i berprestasi Universitas XYZ,\r\n\r\nKami dengan senang hati mengumumkan bahwa telah dibuka pendaftaran Beasiswa Prestasi untuk Semester Ganjil tahun ajaran 2023/2024. Beasiswa ini diperuntukkan bagi mahasiswa/i yang memiliki prestasi akademik yang luar biasa dan aktif berkontribusi dalam kegiatan kampus.\r\n\r\nInformasi Beasiswa:\r\n\r\nJumlah Beasiswa: 10 orang mahasiswa/i terbaik\r\nBesar Beasiswa: Rp 5.000.000,- per mahasiswa/i\r\nSyarat dan ketentuan berlaku\r\nSilakan segera ajukan pendaftaran melalui portal beasiswa kami. Batas akhir pendaftaran adalah tanggal 20 Juli 2023. Tim seleksi akan melakukan penilaian dan pengumuman penerimaan beasiswa akan dilakukan pada tanggal 30 Juli 2023.\r\n\r\nSemoga kesempatan ini dapat menjadi motivasi untuk terus berprestasi dalam akademik dan non-akademik. Sukses untuk para calon penerima beasiswa!', '2023-07-25'),
 	(10, 'enundaan Pengambilan Transkrip Nilai', 'Kepada mahasiswa/i Universitas LMN,\r\n\r\nDiberitahukan bahwa pengambilan transkrip nilai untuk Semester Genap tahun 2022/2023 yang seharusnya dilakukan pada tanggal 15 Juli 2023 mengalami penundaan. Pengambilan transkrip nilai akan dilaksanakan mulai tanggal 20 Juli 2023.\r\n\r\nMohon maaf atas ketidaknyamanan ini. Penundaan ini terjadi karena adanya pemeliharaan sistem akademis yang sedang berlangsung. Semua data transkrip nilai tetap aman dan tidak ada perubahan pada hasil nilai mahasiswa/i.\r\n\r\nTerima kasih atas pengertiannya. Jika ada pertanyaan lebih lanjut, silakan hubungi bagian akademis.', '2023-07-25'),
 	(11, 'Pembatalan Kuliah Pengganti Hari Libur Nasional', 'Kepada seluruh mahasiswa/i Fakultas Ilmu Sosial dan Humaniora,\r\n\r\nDengan hormat kami informasikan bahwa kuliah pengganti yang seharusnya dilaksanakan pada tanggal 23 Juli 2023 untuk menggantikan hari libur nasional telah dibatalkan. Mahasiswa/i dimohon untuk tidak hadir pada tanggal tersebut.\r\n\r\nKuliah akan tetap berlangsung sesuai jadwal yang telah ditetapkan sebelumnya, dan tidak ada perubahan terkait jadwal kuliah lainnya.\r\n\r\nTerima kasih atas perhatiannya dan selamat belajar!', '2023-07-25');
+
+-- Dumping structure for table siakad_uit_jaksel.rekap_nilai
+CREATE TABLE IF NOT EXISTS `rekap_nilai` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `matakuliah` varchar(50) DEFAULT NULL,
+  `nilai` int(11) DEFAULT NULL,
+  `pertemuan` int(11) DEFAULT NULL,
+  `jenis_penilaian` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table siakad_uit_jaksel.rekap_nilai: ~0 rows (approximately)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
