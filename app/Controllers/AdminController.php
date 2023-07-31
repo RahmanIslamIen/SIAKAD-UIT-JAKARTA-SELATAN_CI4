@@ -200,6 +200,7 @@ class AdminController extends BaseController
     }
 
     //* bagian menu Rekap Nilai Untuk IPK
+    // TODO: buat seluruh keseluruhan fungsi pada rekap nilai
     public function seluruhNilai(){
         return view('admin/menu_rekap');
     }
