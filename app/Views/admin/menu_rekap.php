@@ -13,7 +13,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="<?php echo base_url('/matkul') ?>" class="nav-link">
           <i class="fas fa-circle nav-icon"></i>
           <p>Mata kuliah</p>
         </a>

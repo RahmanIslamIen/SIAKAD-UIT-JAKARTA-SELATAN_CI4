@@ -53,9 +53,8 @@ $routes->get('/mahasiswa', 'AdminController::semuaMahasiswa');
 $routes->post('admin/mahasiswa/tambah', 'AdminController::tambahMahasiswa');
 $routes->post('admin/mahasiswa/update/(:num)', 'AdminController::updateMahasiswa/$1');
 $routes->get('admin/mahasiswa/hapus/(:num)', 'AdminController::hapusMahasiswa/$1');
-
-
 // menu rekapitulasi data nilai benttuk pdf
+$routes->get('/rekap-nilai', 'AdminController::seluruhNilai');
 
 //* semua route bagian user
 
