@@ -31,7 +31,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="<?php echo base_url('/rekap-nilai') ?>" class="nav-link">
           <i class="fas fa-circle nav-icon"></i>
           <p>Rekap Nilai</p>
         </a>
@@ -98,7 +98,7 @@
     <?php foreach($semua_matkul as $matakuliah): ?>
    <tr>
       <td><?php echo $matakuliah['nama_matkul']; ?></td>
-      <td><?php echo $matakuliah['kd_matkul'] ?></td>
+      <td><?php echo $matakuliah['kd_matkul']; ?></td>
       <td class="text-center">
           <!-- update data -->
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $matakuliah['id']; ?>">

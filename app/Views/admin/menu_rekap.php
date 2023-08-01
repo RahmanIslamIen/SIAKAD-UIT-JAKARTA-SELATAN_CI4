@@ -60,5 +60,24 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-
+<table id="Dtables" class="table table-striped" style="width:100%">
+  <thead class="table-dark">
+    <tr>
+      <td>mata kuliah</td>
+      <td>nilai</td>
+      <td>pertemuan</td>
+      <td>jenis penilaian</td>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($semua_nilai as $isi_baris): ?>
+    <tr>
+      <td><?php echo $isi_baris['matakuliah']; ?></td>
+      <td><?php echo $isi_baris['nilai']; ?></td>
+      <td><?php echo $isi_baris['pertemuan']; ?></td>
+      <td><?php echo $isi_baris['jenis_penilaian']; ?></td>
+    </tr>
+    <?php endforeach ?>
+  </tbody>
+</table>
 <?= $this->endSection() ?>

@@ -31,7 +31,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="<?php echo base_url('/rekap-nilai') ?>" class="nav-link">
           <i class="fas fa-circle nav-icon"></i>
           <p>Rekap Nilai</p>
         </a>
