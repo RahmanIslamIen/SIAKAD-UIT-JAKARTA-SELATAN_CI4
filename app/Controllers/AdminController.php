@@ -202,6 +202,9 @@ class AdminController extends BaseController
 
     //* bagian menu Rekap Nilai Untuk IPK
     // TODO: buat seluruh keseluruhan fungsi pada rekap nilai
+    public function tambahPenilaian(){
+
+    }
     public function seluruhNilai(){
         $model = new RekapNilaiModel;
         $data['semua_nilai'] = $model->findAll();
