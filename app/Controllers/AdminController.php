@@ -5,6 +5,7 @@ use App\Models\PengumumanModel;
 use App\Models\MatakuliahModel;
 use App\Models\DosenModel;
 use App\Models\MahasiswaModel;
+use App\Models\RekapNilaiModel;
 
 class AdminController extends BaseController
 {
@@ -202,7 +203,9 @@ class AdminController extends BaseController
     //* bagian menu Rekap Nilai Untuk IPK
     // TODO: buat seluruh keseluruhan fungsi pada rekap nilai
     public function seluruhNilai(){
-        return view('admin/menu_rekap');
+        $model = new RekapNilaiModel;
+        $data['semua_nilai'] = $model->findAll();
+        return view('admin/menu_rekap', $data);
     }
 
 }
