@@ -158,9 +158,35 @@ CREATE TABLE IF NOT EXISTS `rekap_nilai` (
   `pertemuan` int(11) DEFAULT NULL,
   `jenis_penilaian` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table siakad_uit_jaksel.rekap_nilai: ~0 rows (approximately)
+-- Dumping data for table siakad_uit_jaksel.rekap_nilai: ~25 rows (approximately)
+REPLACE INTO `rekap_nilai` (`id`, `matakuliah`, `nilai`, `pertemuan`, `jenis_penilaian`) VALUES
+	(1, 'Dasar Pemrograman Web', 78, 5, 'uts'),
+	(2, 'Sistem Operasi', 86, 8, 'uas'),
+	(3, 'Matematika Diskrit', 65, 3, 'tugas'),
+	(4, 'Pengantar Database', 73, 4, 'uts'),
+	(5, 'Algoritma dan Struktur Data', 92, 9, 'uas'),
+	(6, 'Statistik', 88, 6, 'tugas'),
+	(7, 'Pemrograman Mobile', 78, 7, 'uts'),
+	(8, 'Bahasa Inggris', 75, 5, 'uas'),
+	(9, 'Kecerdasan Buatan', 80, 10, 'tugas'),
+	(10, 'Rekayasa Perangkat Lunak', 81, 8, 'uts'),
+	(11, 'Pemrograman Berorientasi Objek', 95, 11, 'uas'),
+	(12, 'Komunikasi Teknis', 70, 4, 'tugas'),
+	(13, 'Jaringan Komputer', 85, 6, 'uts'),
+	(14, 'Basis Data Lanjut', 88, 9, 'uas'),
+	(15, 'Pengantar Teknologi Informasi', 68, 3, 'tugas'),
+	(16, 'Pemrograman Python', 82, 7, 'uts'),
+	(17, 'Arsitektur Komputer', 78, 5, 'uas'),
+	(18, 'Manajemen Proyek', 90, 12, 'tugas'),
+	(19, 'Interaksi Manusia dan Komputer', 76, 8, 'uts'),
+	(20, 'Etika Profesi', 84, 10, 'uas'),
+	(21, 'Pemrograman Java', 77, 6, 'tugas'),
+	(22, 'Teori Graf', 93, 9, 'uts'),
+	(23, 'Sistem Informasi Geografis', 79, 11, 'uas'),
+	(24, 'Pengolahan Citra', 71, 4, 'tugas'),
+	(25, 'Pemrograman C', 85, 7, 'uts');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
