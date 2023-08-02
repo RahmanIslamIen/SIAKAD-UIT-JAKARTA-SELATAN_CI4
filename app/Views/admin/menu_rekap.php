@@ -75,7 +75,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        
+        <form action="" method="post">
+          <label for="">matakuliah</label>
+          <input type="text" name="matakuliah" class="form-control">
+          <label for="">nilai</label>
+          <input type="text" name="nilai" class="form-control">
+          <label for="">pertemuan</label>
+          <input type="text" name="pertemuan" class="form-control">
+          <label for="">jenis penilaian</label>
+          <select name="jenis_penilaian" id="" class="form-select">
+            <option selected>pilih jenis peniliaan</option>
+            <option value="uts">uts</option>
+            <option value="uas">uas</option>
+            <option value="tugas">tugas</option>
+          </select>
+          <input type="submit" value="Tambah Data Baru" class="btn btn-info m-2">
+        </form>
       </div>
     </div>
   </div>
