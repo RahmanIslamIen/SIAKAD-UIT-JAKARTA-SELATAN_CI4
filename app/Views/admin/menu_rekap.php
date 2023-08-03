@@ -112,7 +112,44 @@
       <td><?php echo $isi_baris['nilai']; ?></td>
       <td><?php echo $isi_baris['pertemuan']; ?></td>
       <td><?php echo $isi_baris['jenis_penilaian']; ?></td>
-      <td><a href="<?= base_url('admin/rekap-nilai/hapus/'.$isi_baris['id']) ?>"></a></td>
+      <td>
+        <!-- Button update nilai rekap -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $isi_baris['id']; ?>">
+          update
+        </button>
+
+        <!-- Modal update nilai rekap -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="<?php echo $isi_baris['id']; ?>" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">perbaharui data rekap nilai</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="" method="post">
+                  <label for="">matakuliah</label>
+                  <input type="text" name="matakuliah" class="form-control">
+                  <label for="">nilai</label>
+                  <input type="text" name="nilai" class="form-control">
+                  <label for="">pertemuan</label>
+                  <input type="text" name="pertemuan" class="form-control">
+                  <label for="">jenis penilaian</label>
+                  <select name="jenis_penilaian" id="" class="form-select">
+                    <option selected>pilih jenis peniliaan</option>
+                    <option value="uts">uts</option>
+                    <option value="uas">uas</option>
+                    <option value="tugas">tugas</option>
+                  </select>
+                  <input type="submit" value="Tambah Data Baru" class="btn btn-info m-2">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- hapus rekap nilai -->
+        <a href="<?= base_url('admin/rekap-nilai/hapus/'.$isi_baris['id']) ?>" style="btn btn-danger">hapus</a>
+      </td>
     </tr>
     <?php endforeach ?>
   </tbody>
