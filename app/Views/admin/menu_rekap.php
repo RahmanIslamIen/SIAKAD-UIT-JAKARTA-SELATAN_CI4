@@ -112,6 +112,7 @@
       <td><?php echo $isi_baris['nilai']; ?></td>
       <td><?php echo $isi_baris['pertemuan']; ?></td>
       <td><?php echo $isi_baris['jenis_penilaian']; ?></td>
+      <td><a href="<?= base_url('admin/rekap-nilai/hapus/'.$isi_baris['id']) ?>"></a></td>
     </tr>
     <?php endforeach ?>
   </tbody>

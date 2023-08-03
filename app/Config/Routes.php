@@ -56,6 +56,8 @@ $routes->get('admin/mahasiswa/hapus/(:num)', 'AdminController::hapusMahasiswa/$1
 // menu rekapitulasi data nilai benttuk pdf
 $routes->get('/rekap-nilai', 'AdminController::seluruhNilai');
 $routes->post('admin/rekap-nilai/tambah', 'AdminController::tambahPenilaian');
+$routes->get('admin/rekap-nilai/hapus/(:num)', 'AdminController::hapusRekapNilai/$1');
+
 
 
 //* semua route bagian user

@@ -227,4 +227,10 @@ class AdminController extends BaseController
         return view('admin/menu_rekap', $data);
     }
 
+    public function hapusRekapNilai($id){
+        $model = new RekapNilaiModel;
+        $model->delete($id);
+        return redirect()->back();
+    }
+
 }
