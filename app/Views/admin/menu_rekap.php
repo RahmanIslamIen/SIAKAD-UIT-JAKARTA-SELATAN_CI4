@@ -141,7 +141,7 @@
                     <option value="uas">uas</option>
                     <option value="tugas">tugas</option>
                   </select>
-                  <input type="submit" value="Tambah Data Baru" class="btn btn-info m-2">
+                  <input type="submit" value="ubah data nilai" class="btn btn-info m-2 float-end">
                 </form>
               </div>
             </div>
