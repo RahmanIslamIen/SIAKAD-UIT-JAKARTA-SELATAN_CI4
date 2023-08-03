@@ -201,7 +201,6 @@ class AdminController extends BaseController
     }
 
     //* bagian menu Rekap Nilai Untuk IPK
-    // TODO: buat seluruh keseluruhan fungsi pada rekap nilai
     public function tambahPenilaian(){
         $mata_kuliah = $this->request->getPost('mata_kuliah');
         $nilai = $this->request->getPost('nilai');
