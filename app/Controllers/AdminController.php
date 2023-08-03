@@ -221,6 +221,25 @@ class AdminController extends BaseController
         return redirect()->back();
     }
 
+    public function updateRekapNilai($id){
+        $mata_kuliah = $this->request->getPost('mata_kuliah');
+        $nilai = $this->request->getPost('nilai');
+        $pertemuan = $this->request->getPost('pertemuan');
+        $jenis_penilaian = $this->request->getPost('jenis_penilaian');
+
+        $model = new RekapNilaiModel;
+
+        $data = [
+            'mata_kuliah' => $mata_kuliah,
+            'nilai' => $nilai,
+            'pertemuan' => $pertemuan,
+            'jenis_penilaian' => $jenis_penilaian
+        ];
+
+        $model->update($id, $data);
+        return redirect()->back();
+    }
+
     public function seluruhNilai(){
         $model = new RekapNilaiModel;
         $data['semua_nilai'] = $model->findAll();
