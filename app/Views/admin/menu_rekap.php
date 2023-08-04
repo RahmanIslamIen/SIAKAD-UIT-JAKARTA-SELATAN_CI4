@@ -129,14 +129,14 @@
               <div class="modal-body">
                 <form action="" method="post">
                   <label for="">matakuliah</label>
-                  <input type="text" name="matakuliah" class="form-control">
+                  <input type="text" name="matakuliah" class="form-control" value="<?php echo $isi_baris['matakuliah']; ?>">
                   <label for="">nilai</label>
-                  <input type="text" name="nilai" class="form-control">
+                  <input type="text" name="nilai" class="form-control" value="<?php echo $isi_baris['nilai']; ?>">
                   <label for="">pertemuan</label>
-                  <input type="text" name="pertemuan" class="form-control">
+                  <input type="number" name="pertemuan" class="form-control" value="<?php echo $isi_baris['pertemuan']; ?>">
                   <label for="">jenis penilaian</label>
                   <select name="jenis_penilaian" id="" class="form-select">
-                    <option selected>pilih jenis peniliaan</option>
+                    <option selected><?php echo $isi_baris['jenis_penilaian']; ?></option>
                     <option value="uts">uts</option>
                     <option value="uas">uas</option>
                     <option value="tugas">tugas</option>
