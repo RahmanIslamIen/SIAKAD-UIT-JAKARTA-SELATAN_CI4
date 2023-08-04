@@ -202,7 +202,7 @@ class AdminController extends BaseController
 
     //* bagian menu Rekap Nilai Untuk IPK
     public function tambahPenilaian(){
-        $mata_kuliah = $this->request->getPost('mata_kuliah');
+        $matakuliah = $this->request->getPost('matakuliah');
         $nilai = $this->request->getPost('nilai');
         $pertemuan = $this->request->getPost('pertemuan');
         $jenis_penilaian = $this->request->getPost('jenis_penilaian');
@@ -210,7 +210,7 @@ class AdminController extends BaseController
         $model = new RekapNilaiModel;
 
         $data = [
-            'mata_kuliah' => $mata_kuliah,
+            'matakuliah' => $matakuliah,
             'nilai' => $nilai,
             'pertemuan' => $pertemuan,
             'jenis_penilaian' => $jenis_penilaian
@@ -221,7 +221,7 @@ class AdminController extends BaseController
     }
 
     public function updateRekapNilai($id){
-        $mata_kuliah = $this->request->getPost('mata_kuliah');
+        $matakuliah = $this->request->getPost('matakuliah');
         $nilai = $this->request->getPost('nilai');
         $pertemuan = $this->request->getPost('pertemuan');
         $jenis_penilaian = $this->request->getPost('jenis_penilaian');
@@ -229,7 +229,7 @@ class AdminController extends BaseController
         $model = new RekapNilaiModel;
 
         $data = [
-            'mata_kuliah' => $mata_kuliah,
+            'matakuliah' => $matakuliah,
             'nilai' => $nilai,
             'pertemuan' => $pertemuan,
             'jenis_penilaian' => $jenis_penilaian

@@ -79,7 +79,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="<?= base_url('admin/rekap-nilai/tambah') ?>" method="post">
           <label for="">matakuliah</label>
           <input type="text" name="matakuliah" class="form-control">
           <label for="">nilai</label>
@@ -124,7 +124,7 @@
         </button>
 
         <!-- Modal update nilai rekap -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="<?php echo $isi_baris['id']; ?>" aria-hidden="true">
+        <div class="modal fade" id="<?php echo $isi_baris['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
@@ -133,13 +133,13 @@
               </div>
               <div class="modal-body">
                 <form action="<?= base_url('admin/rekap-nilai/update/'.$isi_baris['id']) ?>" method="post">
-                  <label for="">matakuliah</label>
+                  <label for="" class="float-start">matakuliah</label>
                   <input type="text" name="matakuliah" class="form-control" value="<?php echo $isi_baris['matakuliah']; ?>">
-                  <label for="">nilai</label>
+                  <label for="" class="float-start">nilai</label>
                   <input type="text" name="nilai" class="form-control" value="<?php echo $isi_baris['nilai']; ?>">
-                  <label for="">pertemuan</label>
+                  <label for="" class="float-start">pertemuan</label>
                   <input type="number" name="pertemuan" class="form-control" value="<?php echo $isi_baris['pertemuan']; ?>">
-                  <label for="">jenis penilaian</label>
+                  <label for="" class="float-start">jenis penilaian</label>
                   <select name="jenis_penilaian" id="" class="form-select">
                     <option selected><?php echo $isi_baris['jenis_penilaian']; ?></option>
                     <option value="uts">uts</option>
