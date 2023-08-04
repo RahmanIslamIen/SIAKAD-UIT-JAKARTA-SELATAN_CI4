@@ -1,0 +1,44 @@
+ERROR - 2023-08-04 13:47:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'siakad_uit_jaks...', 3306, '', 0)
+#1 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\app\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(932): App\Controllers\AdminController->index()
+#8 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\app\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(932): App\Controllers\AdminController->index()
+#7 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\RAHMAN-DATA\project-rahman\SIAKAD-UIT-JAKARTA-SELATAN_CI4\system\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\...')
+#11 {main}
+CRITICAL - 2023-08-04 13:47:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengumuman`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')

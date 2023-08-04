@@ -61,10 +61,14 @@
 
 <?= $this->section('content') ?>
 
+
 <!-- Button tambah nilai rekap -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Tambah Penilaian
 </button>
+
+<!-- tombol buat print data penilaian -->
+<a href="#" class="btn btn-warning text-light">Print Data</a>
 
 <!-- Modal tambah nilai rekap -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -103,6 +107,7 @@
       <td>nilai</td>
       <td>pertemuan</td>
       <td>jenis penilaian</td>
+      <td>Opsi</td>
     </tr>
   </thead>
   <tbody>
@@ -112,7 +117,7 @@
       <td><?php echo $isi_baris['nilai']; ?></td>
       <td><?php echo $isi_baris['pertemuan']; ?></td>
       <td><?php echo $isi_baris['jenis_penilaian']; ?></td>
-      <td>
+      <td class="text-center">
         <!-- Button update nilai rekap -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $isi_baris['id']; ?>">
           update
@@ -127,7 +132,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form action="" method="post">
+                <form action="<?= base_url('admin/rekap-nilai/update/'.$isi_baris['id']) ?>" method="post">
                   <label for="">matakuliah</label>
                   <input type="text" name="matakuliah" class="form-control" value="<?php echo $isi_baris['matakuliah']; ?>">
                   <label for="">nilai</label>
@@ -147,8 +152,9 @@
             </div>
           </div>
         </div>
+
         <!-- hapus rekap nilai -->
-        <a href="<?= base_url('admin/rekap-nilai/hapus/'.$isi_baris['id']) ?>" style="btn btn-danger">hapus</a>
+        <a href="<?= base_url('admin/rekap-nilai/hapus/'.$isi_baris['id']) ?>" class="btn btn-danger">hapus</a>
       </td>
     </tr>
     <?php endforeach ?>
