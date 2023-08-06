@@ -83,7 +83,10 @@
             <td><?php echo $semDos['gelar']; ?></td>
             <td><?php echo $semDos['kd_dosen']; ?></td>
             <td><?php echo $semDos['kd_matkul']; ?></td>
+
+            <!-- TODO: mencari sintaks baru untuk penulisan relationship -->
             <!-- <td><?php // echo $semDos['matakuliah']['nama_matkul']; ?></td> -->
+
             <td class="text-center">
               <!-- Button Update Dosen -->
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $semDos['id']; ?>">
