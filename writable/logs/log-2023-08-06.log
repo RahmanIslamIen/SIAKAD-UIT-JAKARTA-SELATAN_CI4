@@ -34,3 +34,27 @@ in APPPATH\Views\admin\menu_dosen.php on line 85.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-08-06 06:15:45 --> Undefined array key "matakuliah"
+in APPPATH\Views\admin\menu_dosen.php on line 85.
+ 1 APPPATH\Views\admin\menu_dosen.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "matakuliah"', 'C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\app\\Views\\admin\\menu_dosen.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\app\\Views\\admin\\menu_dosen.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/menu_dosen', [], true)
+ 5 APPPATH\Controllers\AdminController.php(107): view('admin/menu_dosen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaDosen()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')
+CRITICAL - 2023-08-06 06:17:24 --> Undefined array key "nama_matkul"
+in APPPATH\Views\admin\menu_dosen.php on line 85.
+ 1 APPPATH\Views\admin\menu_dosen.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_matkul"', 'C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\app\\Views\\admin\\menu_dosen.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\app\\Views\\admin\\menu_dosen.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/menu_dosen', [], true)
+ 5 APPPATH\Controllers\AdminController.php(107): view('admin/menu_dosen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->semuaDosen()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\RAHMAN-DATA\\project-rahman\\SIAKAD-UIT-JAKARTA-SELATAN_CI4\\public\\index.php')

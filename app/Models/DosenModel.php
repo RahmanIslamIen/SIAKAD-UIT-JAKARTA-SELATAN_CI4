@@ -2,6 +2,8 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Models\MatakuliahModel;
+
 
 class DosenModel extends Model
 {
